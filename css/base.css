@@ -1,0 +1,254 @@
+/* base css */
+
+:root {
+    --primary-color: #fc5831;
+    --white-color: #fff;
+    --text-color: #333;
+    --black-color:#000;
+    --border-color: #f2f2f2;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/*responsive */
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.grid__row-extra {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -1px;
+    margin-right: -1px;
+}
+
+.grid__column-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+
+.grid__column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3333%;
+}
+
+.grid__column-12-5 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__column-8 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 66.6667%;
+}
+
+.grid__column-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 33.3333%;
+}
+
+.grid__column-12-8 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 12.5%;
+}
+
+.grid__column-12-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 50%;
+}
+
+.grid__column-12-3-extra {
+    padding-left: 1px;
+    padding-right: 1px;
+    width: 33.3333%;
+}
+
+.grid__column-12-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 25%;
+}
+
+
+.grid__column-12-10-extra {
+    padding-left: 1px;
+    padding-right: 1px;
+    width: 10%;
+}
+
+.grid__row-search {
+    margin-left: 0px;
+    margin-right: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid__column-12-5-extra {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 20%;
+}
+
+/* animation */
+
+@keyframes growth {
+    from {
+        transform: scale(0.6);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* phần thông báo giảm giá trên góc */
+/* body-product-hot-item-celling-notify */
+
+.body-product-hot-item-celling-notify {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 44px;
+    background-color: rgba(255, 212, 36, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.body-product-hot-item-celling-notify::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: -6px;
+    right: 0;
+    border-width: 0 25px 6px 25px;
+    border-style: solid;
+    border-color: transparent rgba(255, 212, 36, 0.9) transparent rgba(255, 212, 36, 0.9);
+}
+
+.celling-notify-percent {
+    font-size: 1.6rem;
+    line-height: 16px;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+.celling-notify-title {
+    margin-top: 4px;
+    font-size: 1.8rem;
+    line-height: 18px;
+    font-weight: 400;
+    color: var(--white-color);
+}
+
+/* phần mũi têm dc zoom lên xài chung nhiều */
+
+.body-category-product-viewadd {
+    position: absolute;
+    z-index: 6;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -2px 2px 3px #f5f5f5;
+}
+
+.body-category-product-viewadd:hover {
+    zoom: 160%;
+}
+
+/* phần đánh giá yêu thích và thông báo giảm giá trên góc trên sản phẩm */
+
+/* Phần yêu thích */
+
+.body-prodcut-suggest-trend-item-vote {
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: -4px;
+    width: 60px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.body-prodcut-suggest-trend-item-vote::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    border-top: solid 4px var(--primary-color);
+    border-left: solid 4px transparent;
+    bottom: -4px;
+    left: 0;
+    filter: brightness(60%);
+}
+
+/* phần giảm giá */
+
+.body-prodcut-suggest-trend-item-discount {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 34px;
+    height: 34px;
+    background-color: #ffd736;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.body-prodcut-suggest-trend-item-discount-percent {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 12px;
+    color: var(--primary-color);
+}
+
+.body-prodcut-suggest-trend-item-discount-title {
+    margin-top: 2px;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 12px;
+    color: var(--white-color);
+}
